@@ -84,14 +84,14 @@ const ProfilesList = () => {
 
   const [shownProfile, setShownProfile] = useState(profiles[0]);
 
-  const handleClick = (name) => {
+  const chooseProfile = (name) => {
     const newProfile = profiles.filter((profile) => profile.name === name)[0];
     setShownProfile(newProfile);
   };
 
   return (
     <div>
-      <Navbar profiles={profiles} handleClick={handleClick} />
+      <Navbar profiles={profiles} chooseProfile={chooseProfile} />
       <Profile shownProfile={shownProfile} />
     </div>
   );
